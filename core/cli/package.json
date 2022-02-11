@@ -30,7 +30,7 @@
     "url": "https://github.com/GATING/gating-cli/issues"
   },
   "dependencies": {
-    "@gating-cli/config": "file:../../config",
+    "@gating-cli/config": "file:../../utils/config",
     "@gating-cli/exec": "file:../exec",
     "@gating-cli/get-npm-info": "file:../../utils/get-npm-info",
     "@gating-cli/log": "file:../../utils/log",

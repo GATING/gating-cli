@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@gating-cli/command": "file:../../models/command",
-    "@gating-cli/config": "file:../../config",
+    "@gating-cli/config": "file:../../utils/config",
     "@gating-cli/log": "file:../../utils/log",
     "@gating-cli/package": "file:../../models/package",
     "@gating-cli/request": "file:../../utils/request",

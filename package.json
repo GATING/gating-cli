@@ -26,7 +26,7 @@
       "path": "./node_modules/cz-customizable"
     },
     "cz-customizable": {
-      "config": "./config/lib/.cz-config.js"
+      "config": "./utils/config/lib/.cz-config.js"
     }
   }
 }
