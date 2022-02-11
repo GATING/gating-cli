@@ -1,7 +1,32 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "commit": "git add -A && git-cz",
+    "commitlint": "commitlint",
+    "release": "bash ./build/release.sh",
+    "release:note": "conventional-changelog --config ./build/changelog-generator/index.js --infile CHANGELOG.md --same-file  -s -r 0"
+  },
   "devDependencies": {
+    "commitizen": "^4.2.4",
+    "commitlint": "^16.1.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-customizable": "^6.3.0",
+    "git-cz": "^4.8.0",
+    "husky": "^7.0.4",
     "lerna": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "npm run commitlint -- -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./config/lib/.cz-config.js"
+    }
   }
 }

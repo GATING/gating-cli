@@ -31,6 +31,8 @@
     "@gating-cli/log": "file:../../utils/log",
     "@gating-cli/request": "file:../../utils/request",
     "@gating-cli/spinner": "file:../../utils/spinner",
+    "@gating-cli/utils": "file:../../utils/utils",
+    "cz-customizable": "^6.3.0",
     "fs-extra": "^10.0.0",
     "inquirer": "^8.2.0",
     "semver": "^7.3.5",

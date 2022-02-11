@@ -12,6 +12,7 @@ const { VERSION_RELEASE, VERSION_DEVELOP, getGitConfig } = require('@gating-cli/
 
 const Github = require('./Github')
 const Gitee = require('./Gitee')
+const getPrompt = require('./gitPrompt')
 
 // git服务配置文件
 const GIT_SERVER_FILE = '.git_server'
@@ -283,16 +284,7 @@ class Git {
       await this.git.add(status.deleted)
       await this.git.add(status.modified)
       await this.git.add(status.renamed)
-      let message
-      while (!message) {
-        message = (
-          await inquirer.prompt({
-            type: 'text',
-            name: 'message',
-            message: '请输入commit信息：'
-          })
-        ).message
-      }
+      const message = await getPrompt()
       await this.git.commit(message)
       log.success('本次commit提交成功')
     }

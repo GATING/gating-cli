@@ -27,7 +27,7 @@ function get(obj, keyList, defaultValue) {
   if (!isArray(keyList)) {
     keys = keyList.split('.')
   }
-  return keys.reduce((result, key) => result[key] || defaultValue, obj)
+  return keys.reduce((result, key) => (result && result[key] ? result[key] : defaultValue), obj)
 }
 
 /**

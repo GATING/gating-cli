@@ -46,7 +46,7 @@ class PublishCommand extends Command {
     if (!fs.existsSync(pkgPath)) {
       throw new Error('package.json不存在！')
     }
-    // 2.确认是否包含name、version、build命令
+    // 2.确认是否包含name、version、scripts
     const pkg = fs.readJsonSync(pkgPath)
     const { name, version, scripts } = pkg
     log.verbose('package.json', name, version, scripts)
