@@ -24,6 +24,9 @@ const { getNpmLatestVersion } = require('@gating-cli/get-npm-info')
 
 const pkg = require('../package.json')
 
+// clean命令
+const cleanCommand = require('./cleanCommand')
+
 // 用户主目录
 const userHome = homedir()
 const program = new commander.Command()
@@ -137,9 +140,8 @@ function registerCommand() {
   program
     .command('clean')
     .description('清空所有缓存文件')
-    .option('-a, --all', '清空全部')
     .option('-c, --cache', '清空缓存依赖文件')
-    .action(exec)
+    .action(cleanCommand)
 
   program
     .command('info')

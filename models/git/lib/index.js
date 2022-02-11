@@ -8,7 +8,7 @@ const terminalLink = require('terminal-link')
 const semver = require('semver')
 const log = require('@gating-cli/log')
 const spinnerStart = require('@gating-cli/spinner')
-const { VERSION_RELEASE, VERSION_DEVELOP, getGitConfig } = require('../../../utils/config/lib')
+const { VERSION_RELEASE, VERSION_DEVELOP, getGitConfig } = require('@gating-cli/config')
 
 const Github = require('./Github')
 const Gitee = require('./Gitee')
