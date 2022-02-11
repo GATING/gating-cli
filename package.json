@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "publish": "lerna publish",
     "commit": "git add -A && git-cz",
     "commitlint": "commitlint"
   },
