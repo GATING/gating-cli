@@ -9,6 +9,11 @@
     }
   },
   "changelogPreset": "./build/changelog-generator",
-  "packages": ["core/*", "commands/*", "models/*", "utils/*"],
-  "version": "1.0.0"
+  "packages": [
+    "core/*",
+    "commands/*",
+    "models/*",
+    "utils/*"
+  ],
+  "version": "1.0.1"
 }
