@@ -1,4 +1,14 @@
 {
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): %s"
+    },
+    "version": {
+      "allowBranch": "main"
+    }
+  },
+  "changelogPreset": "./build/changelog-generator",
   "packages": ["core/*", "commands/*", "models/*", "utils/*"],
   "version": "1.0.0"
 }
