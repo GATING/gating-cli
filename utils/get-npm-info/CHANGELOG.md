@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.2"></a>
+
+# 1.0.2 (2022-02-11)
+[完整变更日志](https://github.com/compare/v1.0.1...v1.0.2)
+
+## 🐞 修复
+
+* get-npm-info: 版本排序出错 ([4e37751](https://github.com/GATING/gating-cli/commit/4e37751))
+
+
 <a name="1.0.1"></a>
 
 # 1.0.1 (2022-02-11)
