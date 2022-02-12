@@ -409,7 +409,7 @@ class InitCommand extends Command {
   /**
    * 转换为kebab case。
    * @param { string } str 字符
-   * @returns { string } 装换后的 kebab case 字符串
+   * @returns { string } 转换后的 kebab case 字符串
    */
   kebabCase(str) {
     return str

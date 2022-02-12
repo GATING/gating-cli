@@ -2,5 +2,16 @@
 
 # {{version}} ({{date}})
 {{#if @root.linkCompare~}}
-[完整变更日志]({{~@root.repoUrl}}/compare/{{previousTag}}...{{currentTag}})
+[完整变更日志]({{~#if @root.repository~}}
+    {{~#if @root.host}}
+      {{~@root.host}}/
+    {{~/if}}
+    {{~#if @root.owner}}
+      {{~@root.owner}}/
+    {{~/if}}
+    {{~@root.repository}}
+  {{~else}}
+    {{~@root.repoUrl}}
+  {{~/if~}}
+  /compare/{{previousTag}}...{{currentTag}})
 {{~/if}}
