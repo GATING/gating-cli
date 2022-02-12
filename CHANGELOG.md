@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.5"></a>
+
+# 1.0.5 (2022-02-12)
+[完整变更日志](https://github.com/GATING/gating-cli/compare/v1.0.4...v1.0.5)
+
+## 🐞 修复
+
+* changelog、commitlint: 修改 changelog 模板，修复 commitlint 配置 ([158a29a](https://github.com/GATING/gating-cli/commit/158a29a))
+
+
+
 <a name="1.0.4"></a>
 
 # 1.0.4 (2022-02-11)
