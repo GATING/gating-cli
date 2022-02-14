@@ -497,7 +497,7 @@ class Git {
   checkGitIgnore() {
     const gitIgnore = resolve(this.dir, GIT_IGNORE_FILE)
     if (!fs.existsSync(gitIgnore)) {
-      const filePath = resolve(__dirname, GIT_IGNORE_FILE)
+      const filePath = resolve(__dirname, 'gitignore.txt')
       fs.writeFileSync(gitIgnore, fs.readFileSync(filePath))
       log.success(`自动写入${GIT_IGNORE_FILE}文件成功`)
     }
