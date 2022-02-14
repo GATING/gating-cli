@@ -14,7 +14,7 @@ const Package = require('@gating-cli/package')
 const log = require('@gating-cli/log')
 const { get } = require('@gating-cli/request')
 const spinnerStart = require('@gating-cli/spinner')
-const { execAsync } = require('@gating-cli/utils')
+const { execAsync, get: getIn } = require('@gating-cli/utils')
 const { DEFAULT_CLI_HOME } = require('@gating-cli/config')
 
 // 用户主目录
@@ -28,9 +28,10 @@ const WHITE_COMMAND = ['npm', 'cnpm', 'pnpm', 'yarn']
 class InitCommand extends Command {
   init() {
     this.projectName = this._argv[0] || ''
-    this.force = !!this._cmd.force
-    this.projectPath = process.env.CLI_PROJECT_PATH || process.cwd()
+    this.force = !!getIn(this._cmd, 'force')
+    this.projectPath = process.env.CLI_PROJECT_PATH || resolve(process.cwd(), this.projectName)
     log.verbose('projectName', this.projectName)
+    log.verbose('projectPath', this.projectPath)
   }
 
   /**
@@ -282,6 +283,7 @@ class InitCommand extends Command {
     this.template = template
     // 1. 判断当前目录是否为空
     const localPath = this.projectPath
+    fs.ensureDirSync(localPath)
     if (!this.isDirEmpty(localPath)) {
       let ifContinue = false
       if (!this.force) {
