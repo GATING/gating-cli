@@ -225,7 +225,7 @@ function registerCommand() {
           ],
           Monorepos: ['Yarn Workspaces', 'Lerna'],
           npmPackages: '/**/{typescript,*vue*,*react*}',
-          npmGlobalPackages: ['@gating-cli']
+          npmGlobalPackages: ['@gating-cli/cli']
         },
         {
           showNotFound: false,
