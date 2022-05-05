@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.0.8"></a>
+
+# 1.0.8 (2022-05-05)
+[完整变更日志](https://github.com/GATING/gating-cli/compare/v1.0.7...v1.0.8)
+
+## 🐞 修复
+
+* info: 修复 npmGlobalPackages 包名称错误 ([9e64773](https://github.com/GATING/gating-cli/commit/9e64773))
+
+## 📚 文档
+
+* cli: 添加文档说明 ([5049bb4](https://github.com/GATING/gating-cli/commit/5049bb4))
+
+
+
 <a name="1.0.7"></a>
 
 # 1.0.7 (2022-02-14)
